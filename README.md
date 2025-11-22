@@ -14,3 +14,11 @@ https://www.jenkins.io/download/
 ## Jenkins Pipeline Plugin
 
 Pipeline: Stage View Plugin
+
+## AWS EKS Connection Command
+
+    aws configure
+    
+    aws eks --region ap-south-1 describe-cluster --name gfgCluster --query cluster.status
+    
+    aws eks --region ap-south-1 update-kubeconfig --name gfgCluster
