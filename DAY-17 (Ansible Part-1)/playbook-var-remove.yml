@@ -1,0 +1,15 @@
+---
+- hosts: gfg
+  become: yes
+  vars:
+    currstate: absent
+
+  tasks:
+    - name: Remove HTOP
+      action: yum name=htop state='{{ currstate }}' purge=yes
+
+    - name: Remove Git
+      action: tum name=git state='{{ currstate }}' purge=yes
+
+    - name: Autoremove unused packages
+      action: yum autoremove=yes
