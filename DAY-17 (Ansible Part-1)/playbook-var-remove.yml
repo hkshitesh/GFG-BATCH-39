@@ -6,10 +6,10 @@
 
   tasks:
     - name: Remove HTOP
-      action: yum name=htop state='{{ currstate }}' purge=yes
+      action: yum name=htop state='{{ currstate }}'
 
     - name: Remove Git
-      action: tum name=git state='{{ currstate }}' purge=yes
+      action: tum name=git state='{{ currstate }}'
 
     - name: Autoremove unused packages
       action: yum autoremove=yes
