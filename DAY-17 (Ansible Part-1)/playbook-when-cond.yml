@@ -10,21 +10,21 @@
       apt: update_cache=yes
 
     - name: Install htop
-      action: apt name=htop state=present update_cache=yes
+      action: yum name=htop state=present update_cache=yes
       when: operation == "install"
 
     - name: Install git
-      action: apt name=git state=present update_cache=yes
+      action: yum name=git state=present update_cache=yes
       when: operation == "install"
 
     - name: Remove htop
-      action: apt name=htop state=absent
+      action: yum name=htop state=absent
       when: operation == "remove"
 
     - name: Remove git
-      action: apt name=git state=absent
+      action: yum name=git state=absent
       when: operation == "remove"
 
     - name: Autoremove unused packages
-      action: apt autoremove=yes
+      action: yum autoremove=yes
       when: operation == "remove"
