@@ -5,6 +5,6 @@
     currstate: present
   tasks:
     - name: Install HTOP
-      action: apt name=htop state='{{currstate}}'
+      action: yum name=htop state='{{currstate}}'
     - name: Install Git
-      action: apt name=git state='{{currstate}}'
+      action: yum name=git state='{{currstate}}'
