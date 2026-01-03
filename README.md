@@ -22,3 +22,8 @@ Pipeline: Stage View Plugin
     aws eks --region ap-south-1 describe-cluster --name gfgCluster --query cluster.status
     
     aws eks --region ap-south-1 update-kubeconfig --name gfgCluster
+
+## Monitoring Flow
+
+<img width="1364" height="758" alt="image" src="https://github.com/user-attachments/assets/22952b1a-720f-4bd4-9b46-b133479d5326" />
+
